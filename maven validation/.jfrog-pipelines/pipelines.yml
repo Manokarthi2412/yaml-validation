@@ -1,0 +1,19 @@
+resources:
+  - name: git_repo
+    type: GitRepo
+    configuration:
+      gitProvider: GitHub
+      path: Manokarthi2412/maven-sample-pipelines
+      branches:
+        include: main
+pipelines:
+  name: mvn_build
+  steps:
+    - name: mvn_build
+      type: MvnBuild
+      configuration:
+        integrations:
+          - name: mkartifactory
+       inputResources:
+         - name: git_repo
+        mvnCommand: clean install -DskipTests # optional
