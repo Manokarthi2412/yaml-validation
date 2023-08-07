@@ -2,7 +2,7 @@ resources:
   - name: git_repo
     type: GitRepo
     configuration:
-      gitProvider: mkGitHub
+      gitProvider: mkGithub
       path: Manokarthi2412/yaml-validation
       branches:
         include: main
