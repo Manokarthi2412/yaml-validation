@@ -3,11 +3,11 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: GitHub
-      path: Manokarthi2412/maven-sample-pipelines
+      path: Manokarthi2412/yaml-validation
       branches:
         include: main
 pipelines:
-  name: mvn_build
+  - name: mvn_build
   steps:
     - name: mvn_build
       type: MvnBuild
